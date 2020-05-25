@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html>
 <body style="margin:3em">
-	<div style="text-align: center; margin: 2em; background-color: azure">
+	<div style="text-align: center; margin: 2em;">
 		<h1>ArchViMP </h1>
-		<p>a Framework for Automatic Extraction of Concurrency-related Architectural Properties from Software</p>
-		<p> <strong>Keywords:</strong>Concurrent programming·Multithreading programming·Architectural abstraction·Architectural views</p>
+		<h2> <strong>Arch</strong>itectural <strong>Vi</strong>ews for <strong>M</strong>ultithreaded <strong>P</strong>rograms</h2>
+		<h3>a Framework for Automatic Extraction of Concurrency-related Architectural Properties from Software</h3>
+		<p> <strong>Keywords:</strong> Concurrent programming·Multithreading programming·Architectural abstraction·Architectural views</p>
+	</div>
+	<div>
+		<h2>ArchViMP overview structure</h2>
+		<p>
+			Figure 1 show the overview structure of ArchViMP framework where the interaction of the framework with external systems is depicted.
+		</p>
+		<p style="text-align: center">
+			<img src="img/overview_ArchiVi_blackbox_V5.png" width="500">
+			<i>Figure 1 - The overview structure of ArchViMP framework</i>
+		</p>
+	</div>
+	<div>
+		<h2>ArchViMP Input</h2>
+		<p>
+			We receive three text files as the input for our framework. In below we clarify the format of each.
+		</p>
+		<p>
+		<h3>The list of the shared variables that, is captured by
+			<a href="https://dl.acm.org/doi/pdf/10.1145/265924.265927" target="_blank"><i>Eraser Lockset algorithm</i></a> (See Figure 2) </h3>
+			<code>
+				<strong>variable name,Address of memory,Data type;</strong>
+				395293680,{395293680},INT;CONSTANT;
+				step_simu,{394729264},INT;CONSTANT;
+				tasks,{394729520},POINTER;POINTER;
+				max_step_simu,{394729552},INT;CONSTANT;
+				h_c,{393974944},DOUBLE;CONSTANT;
+				Vz_control_50483_delta_e_c_delta_e_c,{394798512},DOUBLE;CONSTANT;
+			</code>
+		<img src="img/locksetAlg.png">
+		<i>Figure 1 - The overview structure of ArchViMP framework</i>
+		</p>
+
+
 	</div>
 </body>
 </html>
