@@ -129,30 +129,82 @@
 								<li><a href="http://www.tacle.eu/index.php/activities/taclebench" target="_blank">TACLeBench</a> (Timing Analysis on Code-Level) - <a href="https://github.com/tacle/tacle-bench/tree/master/bench/app/powerwindow">powerwindow</a></li>
 							</ul>
 							In addition to these two benchmarks, we developed our own benchmark, called <strong>ThreadCreator</strong>, to mimic the behavior of industrial software as well as to cover the corner cases we mentioned in the paper Section 3.4. </p>
+							<p>
+								We counted the actual number of technical elements for each benchmarks (Table 1).
+								<table class="table">
+								  <thead>
+									<caption>Table 1: Actual number of technical elements of benchmarks</caption>
+									<tr>
+									  <th scope="col"></th>
+									  <th scope="col">ROSACE</th>
+									  <th scope="col">TACLeBench - powerwindow</th>
+									  <th scope="col">ThreadCreator</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <th scope="row">Number of threads (technical components of software)</th>
+									  <td>6</td>
+									  <td>4</td>
+									  <td>10</td>
+									</tr>
+									<tr>
+									  <th scope="row">Number of shared variables (technical data of software)</th>
+									  <td>6</td>
+									  <td>7</td>
+									  <td>19</td>
+									</tr>
+								  </tbody>
+								</table>
+							</p>
+
 						<a name="Result"></a>
-						<h3>Results</h3>
-						<p>
-							When applied on these three benchmarks, our approach produced diagrams at all three levels of abstraction.
-							At level 0, it produced the raw visualization of the execution traces, showing the direct interaction between threads and shared variables.
-							Level 1 of the abstraction illustrates the members (either technical or logical) of each set of logical data as well as the operation access types applied to each member by the threads.
-							At abstraction level 2, we show the interconnection of logical components and logical data.
-							In the following, we show the results for each benchmark individually.
-						</p>
-						<a name="ROSACE"></a>
-						<p>
-							<h4>ROSACE Benchmark</h4>
+						<div>
+							<h3>Results</h3>
+							<p>
+								When applied on these three benchmarks, our approach produced diagrams at all three levels of abstraction.
+								At level 0, it produced the raw visualization of the execution traces, showing the direct interaction between threads and shared variables.
+								Level 1 of the abstraction illustrates the members (either technical or logical) of each set of logical data as well as the operation access types applied to each member by the threads.
+								At abstraction level 2, we show the interconnection of logical components and logical data.
+								In the following, we show the results for each benchmark individually.
+							</p>
+							<a name="ROSACE"></a>
+							<div>
+								<h4>ROSACE Benchmark</h4>
+								<a name="ROSACE_L0"></a>
+								<div>
+									<h5>Raw visualization at abstraction level 0</h5>
 
-						</p>
-						<a name="powerwindow"></a>
-						<p>
-							<h4>TACLeBench - powerwindow Benchmark</h4>
+								</div>
+								<a name="ROSACE_funcView"></a>
+								<div>
+									<p>
+										<h5>Functional concurrency view</h5>
+										The functional concurrency view describes the functional behavior of threads.
+										This view shows the interaction between a logical component created by EPFR rule and logical data
+									</p>
+									<h5>Functional Flow sub-view of Functional concurrency view at level 2</h5>
 
-						</p>
-						<a name="ThreadCreator"></a>
-						<p>
-							<h4>ThreadCreator Benchmark</h4>
+									<h5>Execution Control Flow sub-view of Functional concurrency view at level 2</h5>
+									<h5>Functional Flow sub-view of Functional concurrency view at level 1</h5>
+									<h5>Execution Control Flow sub-view of Functional concurrency view at level 1</h5>
+									<h5>Technical concurrency view at level 1 - result of EPFR rule</h5>
+									<h5>Technical concurrency view at level 1 - result of DTR rule</h5>
+									<h5>Technical concurrency view at level 1 - result of DSR rule</h5>
+								</div>
 
-						</p>
+							</div>
+							<a name="powerwindow"></a>
+							<div>
+								<h4>TACLeBench - powerwindow Benchmark</h4>
+
+							</div>
+							<a name="ThreadCreator"></a>
+							<div>
+								<h4>ThreadCreator Benchmark</h4>
+
+							</div>
+					</div>
 					</div>
 				</div>
 			</div>
