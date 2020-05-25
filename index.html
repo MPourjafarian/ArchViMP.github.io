@@ -8,17 +8,17 @@
 		<p> <strong>Keywords:</strong> Concurrent programming·Multithreading programming·Architectural abstraction·Architectural views</p>
 	</div>
 	<div>
-		<h2>ArchViMP overview structure</h2>
+		<h2>ArchViMP Overview Structure</h2>
 		<p>
 			Figure 1 show the overview structure of ArchViMP framework where the interaction of the framework with external systems is depicted.
 		</p>
 		<p style="text-align: center">
-			<img src="img/overview_ArchiVi_blackbox_V5.png" width="500">
+			<img src="img/overview_ArchiVi_blackbox_V5.png" width="10960">
 			<i>Figure 1: The overview structure of ArchViMP framework</i>
 		</p>
 	</div>
 	<div>
-		<h2>ArchViMP Input</h2>
+		<h2>ArchViMP Inputs</h2>
 		<p>
 			We receive three text files as the input for our framework. In below we clarify the format of each.
 		</p>
@@ -29,13 +29,13 @@
 					<a href="https://dl.acm.org/doi/pdf/10.1145/265924.265927" target="_blank"><i>Eraser Lockset algorithm</i></a>
 
 					<code>
-						<strong>variable name,Address of memory,Data type;</strong>
-						395293680,{395293680},INT;CONSTANT;
-						step_simu,{394729264},INT;CONSTANT;
-						tasks,{394729520},POINTER;POINTER;
-						max_step_simu,{394729552},INT;CONSTANT;
-						h_c,{393974944},DOUBLE;CONSTANT;
-						Vz_control_50483_delta_e_c_delta_e_c,{394798512},DOUBLE;CONSTANT;
+						<strong>variable name,Address of memory,Data type;</strong> <br>
+						395293680,{395293680},INT;CONSTANT;<br>
+						step_simu,{394729264},INT;CONSTANT;<br>
+						tasks,{394729520},POINTER;POINTER;<br>
+						max_step_simu,{394729552},INT;CONSTANT;<br>
+						h_c,{393974944},DOUBLE;CONSTANT;<br>
+						Vz_control_50483_delta_e_c_delta_e_c,{394798512},DOUBLE;CONSTANT;<br>
 					</code>
 				<img src="img/eraserLockset.PNG" alt="Eraser Lockset">
 				<i>Figure2: a) Eraser Lockset memory state model; b) Data structures necessary for Lockset </i>
@@ -44,22 +44,22 @@
 			<h3>2- Execution trace data</h3>
 			This file is a detailed list of the executed instructions. In the box below a small part of the file is displayed.
 			<code>
-				<strong>Timestamp,ThreadID,Operation,ParameterName (function or a variable name),Address of memory,Additional info (data typeof variable),Value,filename,source code line number</strong>
-				11.19.58.1958,6245422,FUNCTIONCALL,main,0,,,,0
-				11:19:58:429,6245422,STORE,,46648696,INT;LOCAL;,0,,0
-				11:19:58:429,6245422,STORE,tsimu,46649000,INT;LOCAL;,20,rosace.c,10
-				11:19:58:429,6245422,LOAD,tsimu,46649000,INT;LOCAL;,20,rosace.c,14
-				11:19:58:429,6245422,LOAD,,0,INT;,20,rosace.c,14
-				11:19:58:429,6245422,FUNCTIONCALL,run_rosace,0,INT;CONSTANT;,,rosace.c,14
-				...
-				11:19:58:636,20176314,STORE,,46648968,INT;LOCAL;,1,assemblage.c,145
-				11:19:58:636,20176314,GETELEMENTPTR,,46648972,POINTER;LOCAL;,0x2c7ce8c,assemblage.c,145
-				11:19:58:636,20176314,STORE,,46648972,INT;LOCAL;,0,assemblage.c,145
-				11:19:58:636,20176314,GETELEMENTPTR,,46648968,POINTER;LOCAL;,0x2c7ce88,assemblage.c,145
-				11:19:58:636,20176314,STORE,,395332088,POINTER;LOCAL;,0x2c7ce88,assemblage.c,145
-				11:19:58:636,20176314,GETELEMENTPTR,struct.write_proto_t,395332092,POINTER;LOCAL;,0x179049fc,assemblage.c,145
-				11:19:58:640,20176314,STORE,,395332092,INT;LOCAL;,2,assemblage.c,145
-				...
+				<strong>Timestamp,ThreadID,Operation,ParameterName (function or a variable name),Address of memory,Additional info (data typeof variable),Value,filename,source code line number</strong><br>
+				11.19.58.1958,6245422,FUNCTIONCALL,main,0,,,,0<br>
+				11:19:58:429,6245422,STORE,,46648696,INT;LOCAL;,0,,0<br>
+				11:19:58:429,6245422,STORE,tsimu,46649000,INT;LOCAL;,20,rosace.c,10<br>
+				11:19:58:429,6245422,LOAD,tsimu,46649000,INT;LOCAL;,20,rosace.c,14<br>
+				11:19:58:429,6245422,LOAD,,0,INT;,20,rosace.c,14<br>
+				11:19:58:429,6245422,FUNCTIONCALL,run_rosace,0,INT;CONSTANT;,,rosace.c,14<br>
+				...<br>
+				11:19:58:636,20176314,STORE,,46648968,INT;LOCAL;,1,assemblage.c,145<br>
+				11:19:58:636,20176314,GETELEMENTPTR,,46648972,POINTER;LOCAL;,0x2c7ce8c,assemblage.c,145<br>
+				11:19:58:636,20176314,STORE,,46648972,INT;LOCAL;,0,assemblage.c,145<br>
+				11:19:58:636,20176314,GETELEMENTPTR,,46648968,POINTER;LOCAL;,0x2c7ce88,assemblage.c,145<br>
+				11:19:58:636,20176314,STORE,,395332088,POINTER;LOCAL;,0x2c7ce88,assemblage.c,145<br>
+				11:19:58:636,20176314,GETELEMENTPTR,struct.write_proto_t,395332092,POINTER;LOCAL;,0x179049fc,assemblage.c,145<br>
+				11:19:58:640,20176314,STORE,,395332092,INT;LOCAL;,2,assemblage.c,145<br>
+				...<br>
 
 			</code>
 		</p>
