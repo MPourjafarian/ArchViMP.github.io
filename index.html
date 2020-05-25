@@ -1,90 +1,105 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>ArchViMP</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="CSS/bootstrap.css">
+	<link rel="stylesheet" href="CSS/bootstrap-grid.css">
+</head>
 <body style="margin:3em">
-	<div style="text-align: center; margin: 2em;">
-		<h1>ArchViMP </h1>
-		<h2> <strong>Arch</strong>itectural <strong>Vi</strong>ews for <strong>M</strong>ultithreaded <strong>P</strong>rograms</h2>
-		<h3>a Framework for Automatic Extraction of Concurrency-related Architectural Properties from Software</h3>
-		<p> <strong>Keywords:</strong> Concurrent programming·Multithreading programming·Architectural abstraction·Architectural views</p>
-	</div>
-	<div>
-		<h2>ArchViMP Overview Structure</h2>
-		<p>
-			Figure 1 show the overview structure of ArchViMP framework where the interaction of the framework with external systems is depicted.
-		</p>
-		<p style="text-align: center">
-			<img src="img/overview_ArchiVi_blackbox_V5.png" width="10960">
-			<i>Figure 1: The overview structure of ArchViMP framework</i>
-		</p>
-	</div>
-	<div>
-		<h2>ArchViMP Inputs</h2>
-		<p>
-			We receive three text files as the input for our framework. In below we clarify the format of each.
-		</p>
-		<p>
-			<h3>1 - The list of the shared variables </h3>
-				This is provided by the <a href="https://dl.acm.org/doi/pdf/10.1145/3339186.3339195" target="_blank"><i> previous work </i></a>
-					(See Figure 2), which is based on using the
-					<a href="https://dl.acm.org/doi/pdf/10.1145/265924.265927" target="_blank"><i>Eraser Lockset algorithm</i></a>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<h3>Outlines</h3>
+			</div>
+			<div style="text-align: center; margin: 2em;" class="col-sm-9">
+				<h1>ArchViMP </h1>
+				<h2> <strong>Arch</strong>itectural <strong>Vi</strong>ews for <strong>M</strong>ultithreaded <strong>P</strong>rograms</h2>
+				<h3>a Framework for Automatic Extraction of Concurrency-related Architectural Properties from Software</h3>
+				<p> <strong>Keywords:</strong> Concurrent programming·Multithreading programming·Architectural abstraction·Architectural views</p>
+			</div>
+			<div>
+				<h2>ArchViMP Overview Structure</h2>
+				<p>
+					Figure 1 show the overview structure of ArchViMP framework where the interaction of the framework with external systems is depicted.
+				</p>
+				<p style="text-align: center">
+					<img src="img/overview_ArchiVi_blackbox_V5.png" width="1096">
+					<i>Figure 1: The overview structure of ArchViMP framework</i>
+				</p>
+			</div>
+			<div>
+				<h2>ArchViMP Inputs</h2>
+				<p>
+					We receive three text files as the input for our framework. In below we clarify the format of each.
+				</p>
+				<p>
+					<h3>1 - The list of the shared variables </h3>
+						This is provided by the <a href="https://dl.acm.org/doi/pdf/10.1145/3339186.3339195" target="_blank"><i> previous work </i></a>
+							(See Figure 2), which is based on using the
+							<a href="https://dl.acm.org/doi/pdf/10.1145/265924.265927" target="_blank"><i>Eraser Lockset algorithm</i></a>
 
+							<code>
+								<br>
+								<strong>variable name,Address of memory,Data type;</strong> <br>
+								395293680,{395293680},INT;CONSTANT;<br>
+								step_simu,{394729264},INT;CONSTANT;<br>
+								tasks,{394729520},POINTER;POINTER;<br>
+								max_step_simu,{394729552},INT;CONSTANT;<br>
+								h_c,{393974944},DOUBLE;CONSTANT;<br>
+								Vz_control_50483_delta_e_c_delta_e_c,{394798512},DOUBLE;CONSTANT;<br>
+							</code>
+						<img src="img/eraserLockset.PNG" alt="Eraser Lockset">
+						<i>Figure2: a) Eraser Lockset memory state model; b) Data structures necessary for Lockset </i>
+				</p>
+				<p>
+					<h3>2- Execution trace data</h3>
+					This file is a detailed list of the executed instructions. In the box below a small part of the file is displayed.
 					<code>
-						<strong>variable name,Address of memory,Data type;</strong> <br>
-						395293680,{395293680},INT;CONSTANT;<br>
-						step_simu,{394729264},INT;CONSTANT;<br>
-						tasks,{394729520},POINTER;POINTER;<br>
-						max_step_simu,{394729552},INT;CONSTANT;<br>
-						h_c,{393974944},DOUBLE;CONSTANT;<br>
-						Vz_control_50483_delta_e_c_delta_e_c,{394798512},DOUBLE;CONSTANT;<br>
+						<br>
+						<strong>Timestamp,ThreadID,Operation,ParameterName (function or a variable name),Address of memory,Additional info (data typeof variable),Value,filename,source code line number</strong><br>
+						11.19.58.1958,6245422,FUNCTIONCALL,main,0,,,,0<br>
+						11:19:58:429,6245422,STORE,,46648696,INT;LOCAL;,0,,0<br>
+						11:19:58:429,6245422,STORE,tsimu,46649000,INT;LOCAL;,20,rosace.c,10<br>
+						11:19:58:429,6245422,LOAD,tsimu,46649000,INT;LOCAL;,20,rosace.c,14<br>
+						11:19:58:429,6245422,LOAD,,0,INT;,20,rosace.c,14<br>
+						11:19:58:429,6245422,FUNCTIONCALL,run_rosace,0,INT;CONSTANT;,,rosace.c,14<br>
+						...<br>
+						11:19:58:636,20176314,STORE,,46648968,INT;LOCAL;,1,assemblage.c,145<br>
+						11:19:58:636,20176314,GETELEMENTPTR,,46648972,POINTER;LOCAL;,0x2c7ce8c,assemblage.c,145<br>
+						11:19:58:636,20176314,STORE,,46648972,INT;LOCAL;,0,assemblage.c,145<br>
+						11:19:58:636,20176314,GETELEMENTPTR,,46648968,POINTER;LOCAL;,0x2c7ce88,assemblage.c,145<br>
+						11:19:58:636,20176314,STORE,,395332088,POINTER;LOCAL;,0x2c7ce88,assemblage.c,145<br>
+						11:19:58:636,20176314,GETELEMENTPTR,struct.write_proto_t,395332092,POINTER;LOCAL;,0x179049fc,assemblage.c,145<br>
+						11:19:58:640,20176314,STORE,,395332092,INT;LOCAL;,2,assemblage.c,145<br>
+						...<br>
+
 					</code>
-				<img src="img/eraserLockset.PNG" alt="Eraser Lockset">
-				<i>Figure2: a) Eraser Lockset memory state model; b) Data structures necessary for Lockset </i>
-		</p>
-		<p>
-			<h3>2- Execution trace data</h3>
-			This file is a detailed list of the executed instructions. In the box below a small part of the file is displayed.
-			<code>
-				<strong>Timestamp,ThreadID,Operation,ParameterName (function or a variable name),Address of memory,Additional info (data typeof variable),Value,filename,source code line number</strong><br>
-				11.19.58.1958,6245422,FUNCTIONCALL,main,0,,,,0<br>
-				11:19:58:429,6245422,STORE,,46648696,INT;LOCAL;,0,,0<br>
-				11:19:58:429,6245422,STORE,tsimu,46649000,INT;LOCAL;,20,rosace.c,10<br>
-				11:19:58:429,6245422,LOAD,tsimu,46649000,INT;LOCAL;,20,rosace.c,14<br>
-				11:19:58:429,6245422,LOAD,,0,INT;,20,rosace.c,14<br>
-				11:19:58:429,6245422,FUNCTIONCALL,run_rosace,0,INT;CONSTANT;,,rosace.c,14<br>
-				...<br>
-				11:19:58:636,20176314,STORE,,46648968,INT;LOCAL;,1,assemblage.c,145<br>
-				11:19:58:636,20176314,GETELEMENTPTR,,46648972,POINTER;LOCAL;,0x2c7ce8c,assemblage.c,145<br>
-				11:19:58:636,20176314,STORE,,46648972,INT;LOCAL;,0,assemblage.c,145<br>
-				11:19:58:636,20176314,GETELEMENTPTR,,46648968,POINTER;LOCAL;,0x2c7ce88,assemblage.c,145<br>
-				11:19:58:636,20176314,STORE,,395332088,POINTER;LOCAL;,0x2c7ce88,assemblage.c,145<br>
-				11:19:58:636,20176314,GETELEMENTPTR,struct.write_proto_t,395332092,POINTER;LOCAL;,0x179049fc,assemblage.c,145<br>
-				11:19:58:640,20176314,STORE,,395332092,INT;LOCAL;,2,assemblage.c,145<br>
-				...<br>
+				</p>
+				<p>
+					<h3>3- Execution path logs (coverage)</h3>
+					This input includes several blocks of information (see Figure 3).
+					<ul>
+						<li>
+							The outer block specified with the “<i>Variable</i>” keyword. Each variable blockcontains information about the operations and accesses that have been doneon a variable.
+						</li>
+						<li>
+							The first inner block with the keyword “<i>Thread</i>” defines the threads thataccessed that variable via a entry point function.
+						</li>
+						<li>
+							The next inner block with the keyword “<i>Function</i>” determines within whichnested function that variable is accessed.
+						</li>
+						<li>
+							The access of a shared variable within a logical decision is specified in the innerblock identified with “<i>logicalDecision</i>” keyword. This information follows thesame format of records in the trace input.
+						</li>
+					</ul>
+					<img src="img/exePathLogs.png" alt="Execution path logs">
+					<i>Figure 3: Format of execution path logs</i>
 
-			</code>
-		</p>
-		<p>
-			<h3>3- Execution path logs (coverage)</h3>
-			This input includes several blocks of information (see Figure 3).
-			<ul>
-				<li>
-					The outer block specified with the “<i>Variable</i>” keyword. Each variable blockcontains information about the operations and accesses that have been doneon a variable.
-				</li>
-				<li>
-					The first inner block with the keyword “<i>Thread</i>” defines the threads thataccessed that variable via a entry point function.
-				</li>
-				<li>
-					The next inner block with the keyword “<i>Function</i>” determines within whichnested function that variable is accessed.
-				</li>
-				<li>
-					The access of a shared variable within a logical decision is specified in the innerblock identified with “<i>logicalDecision</i>” keyword. This information follows thesame format of records in the trace input.
-				</li>
-			</ul>
-			<img src="img/exePathLogs.png" alt="Execution path logs">
-			<i>Figure 3: Format of execution path logs</i>
+				</p>
 
-		</p>
-
+			</div>
+		</div>
 	</div>
 </body>
 </html>
