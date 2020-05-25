@@ -2,3 +2,8 @@ table{width: 45% !important; margin: 1em}
 img {
     width: 45%;
 }
+benchmark-div{margin-top: 5em}
+p.c1{margin-left: 1em}
+p.c2{margin-left: 2em}
+p.c3{margin-left: 3em}
+p.c4{margin-left: 4em}

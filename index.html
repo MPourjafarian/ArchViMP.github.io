@@ -24,10 +24,15 @@
 					<p><a href="#Overview">ArchViMP Overview Structure</a></p>
 					<p><a href="#Inputs">ArchViMP Inputs</a></p>
 					<p><a href="#Evaluation">Evaluation</a></p>
-					<p><a href="#Results">Results</a></p>
-					<p><a href="#ROSACE">ROSACE Benchmark</a></p>
-					<p><a href="#powerwindow">TACLeBench - powerwindow Benchmark</a></p>
-					<p><a href="#ThreadCreator">ThreadCreator Benchmark</a></p>
+					<p class="c1"><a href="#Results">Results</a></p>
+						<p class="c2"><a href="#ROSACE">ROSACE Benchmark</a></p>
+							<p class="c3"><a href="#ROSACE_L0">ROSACE Raw visualization</a></p>
+							<p class="c3"><a href="#ROSACE_funcView">Functional concurrency view</a></p>
+								<p class="c4"><a href="#ROSACE_functional_subview">Functional Flow sub-view</a></p>
+								<p class="c4"><a href="#ROSACE_execution_subview">Execution Control Flow sub-view</a></p>
+							<p class="c3"><a href="#ROSACE_techView">Technical concurrency view</a></p>
+						<p class="c2"><a href="#powerwindow">TACLeBench - powerwindow Benchmark</a></p>
+						<p class="c2"><a href="#ThreadCreator">ThreadCreator Benchmark</a></p>
 				</div>
 				<div class="col-sm-10">
 					<div>
@@ -171,7 +176,7 @@
 								In the following, we show the results for each benchmark individually.
 							</p>
 							<a name="ROSACE"></a>
-							<div>
+							<div class="benchmark-div">
 								<h4>ROSACE Benchmark</h4>
 								<a name="ROSACE_L0"></a>
 								<div>
@@ -194,19 +199,22 @@
 										The functional concurrency view describes the functional behavior of threads.
 										This view shows the interaction between a logical component created by EPFR rule and logical data
 									</p>
-									<h5>Functional Flow sub-view of Functional concurrency view at level 2</h5>
+									<a name="ROSACE_functional_subview"></a>
+										<h6>Functional Flow sub-view of Functional concurrency view at level 2</h6>
+										<a name="ROSACE_execution_subview"></a>
+										<h6>Execution Control Flow sub-view of Functional concurrency view at level 2</h6>
+										<h6>Execution Control Flow sub-view of Functional concurrency view at level 1</h6>
 
-									<h5>Execution Control Flow sub-view of Functional concurrency view at level 2</h5>
-									<h5>Functional Flow sub-view of Functional concurrency view at level 1</h5>
-									<h5>Execution Control Flow sub-view of Functional concurrency view at level 1</h5>
+									<a name="ROSACE_techView"></a>
 									<h5>Technical concurrency view at level 1 - result of EPFR rule</h5>
 									<h5>Technical concurrency view at level 1 - result of DTR rule</h5>
 									<h5>Technical concurrency view at level 1 - result of DSR rule</h5>
 								</div>
 
 							</div>
+							<hr>
 							<a name="powerwindow"></a>
-							<div>
+							<div class="benchmark-div">
 								<h4>TACLeBench - powerwindow Benchmark</h4>
 								<a name="powerwindow_L0"></a>
 								<div>
@@ -224,8 +232,9 @@
 								</div>
 
 							</div>
+							<hr>
 							<a name="ThreadCreator"></a>
-							<div>
+							<div class="benchmark-div">
 								<h4>ThreadCreator Benchmark</h4>
 								<a name="ThreadCreator_L0"></a>
 								<div>
