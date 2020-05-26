@@ -7,19 +7,19 @@
 	<link rel="stylesheet" href="CSS/bootstrap-grid.css">
 	<link rel="stylesheet" href="CSS/main.css">
 </head>
-<body style="margin:3em">
+<body>
 	<div class="container-fluid">
 		<div class="row">
 			<div style="text-align: center; margin: 2em;" class="col-sm-12">
 				<h1>ArchViMP </h1>
 				<h2> <strong>Arch</strong>itectural <strong>Vi</strong>ews for <strong>M</strong>ultithreaded <strong>P</strong>rograms</h2>
 				<h3>a Framework for Automatic Extraction of Concurrency-related Architectural Properties from Software</h3>
-				<p> <strong>Keywords:</strong> Concurrent programming·Multithreading programming·Architectural abstraction·Architectural views</p>
+				<p> <strong>Keywords:</strong> Concurrent programming, Multithreading programming, Architectural abstraction, Architectural views, concurrency properties visualization, </p>
 				<p>&copy; Supported by the research institutes <a href="https://www.iese.fraunhofer.de/en.html" target="_blank"> Fraunhofer IESE</a> and <a target="_blank" href="https://www.dfki.de/en/web/">DFKI-IFS</a></p>
 
 			</div>
 			<div class="col-sm-12 row" style="border-top: aliceblue 2px solid;">
-				<div class="col-sm-2" style="border-right: aliceblue 2px solid;">
+				<div class="col-sm-2 outline-nav" style="border-right: aliceblue 2px solid;">
 					<h3>Outlines</h3>
 					<p><a href="#Overview">ArchViMP Overview Structure</a></p>
 					<p><a href="#Inputs">ArchViMP Inputs</a></p>
@@ -34,7 +34,7 @@
 						<p class="c2"><a href="#powerwindow">TACLeBench - powerwindow Benchmark</a></p>
 						<p class="c2"><a href="#ThreadCreator">ThreadCreator Benchmark</a></p>
 				</div>
-				<div class="col-sm-10">
+				<div class="col-sm-10" style="padding-top: 2em">
 					<div>
 						<a name="Overview"></a>
 						<h2>ArchViMP Overview Structure</h2>
@@ -42,7 +42,7 @@
 							Figure 1 show the overview structure of ArchViMP framework where the interaction of the framework with external systems is depicted.
 						</p>
 						<p style="text-align: center">
-							<img src="img/overview_ArchiVi_blackbox_V5.png" width="1096">
+							<img src="img/overview_ArchiVi_blackbox_V5.png" width="1096" class="overview_dig">
 							<p style="text-align: center"><i>Figure 1: The overview structure of ArchViMP framework</i></p>
 						</p>
 					</div>
@@ -200,15 +200,16 @@
 										This view shows the interaction between a logical component created by EPFR rule and logical data
 									</p>
 									<a name="ROSACE_functional_subview"></a>
-										<h6>Functional Flow sub-view of Functional concurrency view at level 2</h6>
+										<h6><strong>Functional Flow sub-view</strong></h6>
 										<a name="ROSACE_execution_subview"></a>
-										<h6>Execution Control Flow sub-view of Functional concurrency view at level 2</h6>
-										<h6>Execution Control Flow sub-view of Functional concurrency view at level 1</h6>
+										<h6><strong>Execution Control Flow sub-view</strong></h6>
+
 
 									<a name="ROSACE_techView"></a>
-									<h5>Technical concurrency view at level 1 - result of EPFR rule</h5>
-									<h5>Technical concurrency view at level 1 - result of DTR rule</h5>
-									<h5>Technical concurrency view at level 1 - result of DSR rule</h5>
+									<h5>Technical concurrency view at level 1 </h5>
+<!--									<h5>Technical concurrency view at level 1 - result of EPFR rule</h5>-->
+<!--									<h5>Technical concurrency view at level 1 - result of DTR rule</h5>-->
+<!--									<h5>Technical concurrency view at level 1 - result of DSR rule</h5>-->
 								</div>
 
 							</div>

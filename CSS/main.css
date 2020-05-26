@@ -1,9 +1,13 @@
-table{width: 45% !important; margin: 1em}
+.outline-nav {background: #302d43; color: #fff; overflow: hidden; padding-top: 2em}
+.outline-nav a {color: #fff; }
+.outline-nav a:hover {color: #17a2b8; cursor: pointer}
+table{width: 65% !important; margin: 1em}
 img {
     width: 45%;
 }
-benchmark-div{margin-top: 5em}
-p.c1{margin-left: 1em}
-p.c2{margin-left: 2em}
-p.c3{margin-left: 3em}
-p.c4{margin-left: 4em}
+img.overview_dig {width: 95%}
+.benchmark-div{margin-top: 5em}
+p.c1{margin-left: 1em; font-size: medium}
+p.c2{margin-left: 2em; font-size: small}
+p.c3{margin-left: 3em; font-size: small}
+p.c4{margin-left: 4em; font-size: small}
