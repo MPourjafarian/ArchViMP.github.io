@@ -1,7 +1,7 @@
 .outline-nav {background: #302d43; color: #fff; overflow: hidden; padding-top: 2em}
 .outline-nav a {color: #fff; }
 .outline-nav a:hover {color: #17a2b8; cursor: pointer}
-.outline-nav h3, p.c2 {color: #17a2b8;}
+.outline-nav h3, p.c2 a, .benchmark-div h4{color: #17a2b8;}
 table{width: 65% !important; margin: 1em}
 img {
     width: 45%;
@@ -9,7 +9,7 @@ img {
 .techVis_dt img{width: 100%}
 img.overview_dig, .techVis_EPFR img  {width: 95%}
 .benchmark-div{margin-top: 5em}
-.benchmark-div h4{color: #17a2b8;}
+
 p.c1{margin-left: 0.5em; font-size: medium}
 p.c2{margin-left: 1em; font-size: small}
 p.c3{margin-left: 2em; font-size: small}

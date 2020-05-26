@@ -194,8 +194,8 @@
 								</div>
 								<a name="ROSACE_funcView"></a>
 								<div>
+									<h5 class="archView">Functional concurrency view</h5>
 									<p>
-										<h5 class="archView">Functional concurrency view</h5>
 										The functional concurrency view describes the functional behavior of threads.
 										This view shows the interaction between a logical component created by EPFR rule and logical data
 									</p>
@@ -204,22 +204,22 @@
 										<a name="ROSACE_execution_subview"></a>
 										<h6><strong>Execution Control Flow sub-view</strong></h6>
 
-
 									<a name="ROSACE_techView"></a>
 									<h5 class="archView">Technical concurrency view at level 1 </h5>
 									<div class="flex align-items-center">
 										<strong>1- Result of EPFR rule:</strong> Threads are technical components of a piece of software. The below diagram shows threads are grouped by EPFR rule into logical components.
 										<p style="text-align: center" class="techVis_EPFR">
-											<img src="img/Rosace_logical_comp.jpg" alt="ROSACE result of EPFR rule">
+											<img src="img/Rosace_logical_comp.jpg" alt="ROSACE result of EPFR rule"><br>
 											<i>Technical concurrency view at level 1 - created by EPFR rule</i>
 										</p>
 									</div>
-									<div class="flex align-items-center row">
-										<strong>2- Result of DTR rule:</strong> This diagrams, which created by DTR rule, only shows the data types of the shared variables. <br>
-										<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt1.png" alt="ROSACE result of DTR rule"></div>
-										<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt2.png" alt="ROSACE result of DTR rule"></div>
-										<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt3.png" alt="ROSACE result of DTR rule"></div>
-
+									<div class="flex align-items-center">
+										<div class="row">
+											<strong>2- Result of DTR rule:</strong> This diagrams, which created by DTR rule, only shows the data types of the shared variables. <br>
+											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt1.png" alt="ROSACE result of DTR rule"></div>
+											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt2.png" alt="ROSACE result of DTR rule"></div>
+											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt3.png" alt="ROSACE result of DTR rule"></div>
+										</div>
 									</div>
 									<div class="flex align-items-center">
 										<strong>3- Result of DSR rule:</strong> The DSR rule groups the shared variables that, are members of a data structure, into a set of logical data.
@@ -228,9 +228,8 @@
 											<img src="img/Rosace_DSR.png" alt="result of DSR rule" width="300">
 										</p>
 									</div>
-<!--
-								</div>
 
+								</div>
 							</div>
 							<hr>
 							<a name="powerwindow"></a>
@@ -270,7 +269,6 @@
 										<img src="img/RawVis_ThreadCreator.jpg" alt="Raw visualization ThreadCreator Benchmark">
 									</p>
 								</div>
-
 							</div>
 					</div>
 					</div>
