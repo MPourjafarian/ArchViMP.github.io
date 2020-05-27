@@ -151,15 +151,15 @@
 								  <tbody>
 									<tr>
 									  <th scope="row">Number of threads (technical components of software)</th>
-									  <td>6</td>
-									  <td>4</td>
-									  <td>10</td>
+									  <td class="has_num">6</td>
+									  <td class="has_num">4</td>
+									  <td class="has_num">10</td>
 									</tr>
 									<tr>
 									  <th scope="row">Number of shared variables (technical data of software)</th>
-									  <td>6</td>
-									  <td>7</td>
-									  <td>19</td>
+									  <td class="has_num">6</td>
+									  <td class="has_num">7</td>
+									  <td class="has_num">19</td>
 									</tr>
 								  </tbody>
 								</table>
@@ -205,9 +205,10 @@
 										<h6><strong>Execution Control Flow sub-view</strong></h6>
 
 									<a name="ROSACE_techView"></a>
-									<h5 class="archView">Technical concurrency view at level 1 </h5>
+									<h5 class="archView">Technical concurrency view</h5>
+									Diagrams in this view are depicted at the abstraction level 1, which represent the technical members of the logical groups.
 									<div class="flex align-items-center">
-										<strong>1- Result of EPFR rule:</strong> Threads are technical components of a piece of software. The below diagram shows threads are grouped by EPFR rule into logical components.
+										<strong>1- Created by EPFR rule:</strong> Threads are technical components of a piece of software. The below diagram shows threads are grouped by EPFR rule into logical components.
 										<p style="text-align: center" class="techVis_EPFR">
 											<img src="img/Rosace_logical_comp.jpg" alt="ROSACE result of EPFR rule"><br>
 											<i>Technical concurrency view at level 1 - created by EPFR rule</i>
@@ -215,14 +216,14 @@
 									</div>
 									<div class="flex align-items-center">
 										<div class="row">
-											<strong>2- Result of DTR rule:</strong> This diagrams, which created by DTR rule, only shows the data types of the shared variables. <br>
+											<strong>2- Created by DTR rule:</strong> This diagrams only shows the data types of the shared variables. <br>
 											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt1.png" alt="ROSACE result of DTR rule"></div>
 											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt2.png" alt="ROSACE result of DTR rule"></div>
 											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt3.png" alt="ROSACE result of DTR rule"></div>
 										</div>
 									</div>
 									<div class="flex align-items-center">
-										<strong>3- Result of DSR rule:</strong> The DSR rule groups the shared variables that, are members of a data structure, into a set of logical data.
+										<strong>3- Created by DSR rule:</strong> The DSR rule groups the shared variables that, are members of a data structure, into a set of logical data.
 										For ROSACE benchmark, no data structures were found.
 										<p style="text-align: center">
 											<img src="img/Rosace_DSR.png" alt="result of DSR rule" width="300">
@@ -230,10 +231,50 @@
 									</div>
 
 								</div>
+								<div>
+									<h6><strong>Amount of elements on screen in views</strong></h6>
+									<div class="d-flex justify-content-center">
+								<table class="table table-bordered">
+								  <thead>
+									<caption>Table 2: ROSACE benchmark - Amount of elements and relations retrieved in different views</caption>
+									<tr>
+									  <th scope="col"><strong>ROSACE</strong></th>
+									  <th scope="col">Raw visualization</th>
+									  <th scope="col">Functional Flow sub-view <br> at Level 2</th>
+									  <th scope="col">Functional Flow sub-view <br> at Level 1</th>
+									  <th scope="col">Execution Control Flow sub-view <br> at Level 2</th>
+									  <th scope="col">Execution Control Flow sub-view <br> at Level 1</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <th scope="row">Number of Elements (Nodes/Boxes)</th>
+									  <td class="has_num">12</td>
+									  <td class="has_num">6</td>
+									  <td class="has_num"></td>
+									  <td class="has_num"></td>
+									  <td class="has_num"></td>
+
+									</tr>
+									<tr>
+									  <th scope="row">Number of Relations (Edges/Lines)</th>
+									  <td class="has_num">24</td>
+									  <td class="has_num">4</td>
+									  <td class="has_num"></td>
+									  <td class="has_num"></td>
+									  <td class="has_num"></td>
+
+									</tr>
+								  </tbody>
+								</table>
 							</div>
-							<hr>
+								</div>
+
+							</div>
+
 							<a name="powerwindow"></a>
 							<div class="benchmark-div">
+								<hr>
 								<h4>TACLeBench - powerwindow Benchmark</h4>
 								<a name="powerwindow_L0"></a>
 								<div>
@@ -249,11 +290,11 @@
 										<img src="img/RawVis_Tackle.JPG" alt="Raw visualization powerwindow Benchmark">
 									</p>
 								</div>
-
 							</div>
-							<hr>
+
 							<a name="ThreadCreator"></a>
 							<div class="benchmark-div">
+								<hr>
 								<h4>ThreadCreator Benchmark</h4>
 								<a name="ThreadCreator_L0"></a>
 								<div>
