@@ -32,8 +32,20 @@
 								<p class="c4"><a href="#ROSACE_functional_subview">Functional Flow sub-view</a></p>
 								<p class="c4"><a href="#ROSACE_execution_subview">Execution Control Flow sub-view</a></p>
 							<p class="c3"><a href="#ROSACE_techView">Technical concurrency view</a></p>
+							<p class="c3"><a href="#ROSACE_EvaluationParameters">Evaluation Parameters</a></p>
 						<p class="c2"><a href="#powerwindow">TACLeBench - powerwindow Benchmark</a></p>
+							<p class="c3"><a href="#powerwindow_L0">ROSACE Raw visualization</a></p>
+							<p class="c3"><a href="#powerwindow_funcView">Functional concurrency view</a></p>
+							<p class="c3"><a href="#powerwindow_logicView">Logical concurrency view</a></p>
+							<p class="c3"><a href="#powerwindow_techView">Technical concurrency view</a></p>
+							<p class="c3"><a href="#powerwindow_EvaluationParameters">Evaluation Parameters</a></p>
 						<p class="c2"><a href="#ThreadCreator">ThreadCreator Benchmark</a></p>
+							<p class="c3"><a href="#ThreadCreator_L0">ThreadCreator Raw visualization</a></p>
+							<p class="c3"><a href="#ThreadCreator_funcView">Functional concurrency view</a></p>
+								<p class="c4"><a href="#ThreadCreator_functional_subview">Functional Flow sub-view</a></p>
+								<p class="c4"><a href="#ThreadCreator_execution_subview">Execution Control Flow sub-view</a></p>
+							<p class="c3"><a href="#ThreadCreator_techView">Technical concurrency view</a></p>
+							<p class="c3"><a href="#ThreadCreator_EvaluationParameters">Evaluation Parameters</a></p>
 				</div>
 				<div class="col-sm-10" style="padding-top: 2em">
 					<div class="col-sm-12">
@@ -384,7 +396,7 @@
 									<h5 class="archView">Functional concurrency view</h5>
 									<p>
 										<h6 class="archView">Functional Flow sub-view</h6>
-										<img src="img/Tackle_operation_functions_L2.jpg">
+										<img src="img/Tackle_operation_functions_L2.jpg" style="width: 20%">
 									</p>
 									<p>
 										<h6 class="archView">Execution Control Flow sub-view</h6>
@@ -393,15 +405,15 @@
 
 								</div>
 								<div class="col-sm-12">
-									<a name="ROSACE_techView"></a>
+									<a name="powerwindow_techView"></a>
 									<h5 class="archView">Technical concurrency view</h5>
 									<p>
 										<h6 class="archView">1- Logical Components</h6>
-										<img src="img/Tackle_logical_comp.jpg">
+										<img src="img/Tackle_logical_comp.jpg" style="width: 75%">
 									</p>
 									<p>
 										<h6 class="archView">2- Data Type</h6>
-										<img src="img/Tackle_techView_dt.png">
+										<img src="img/Tackle_techView_dt.png" style="width: 60%">
 									</p>
 									<p>
 										<h6 class="archView">3- Logical Data</h6>
@@ -483,18 +495,116 @@
 								<hr>
 								<h4>ThreadCreator Benchmark</h4>
 								<a name="ThreadCreator_L0"></a>
-								<div>
+								<div class="col-sm-12">
 									<h5>ThreadCreator Raw visualization at abstraction level 0</h5>
-									<p>This visualization shows the direct interaction between threads over shared variables with no-abstraction.
-										For this benchmark we reached:
-										<ul>
-											<li>Total Number of Elements: 29</li>
-											<li>Total Number of Relations: 113</li>
-										</ul>
+									<p>
+										This visualization shows the direct interaction between threads over shared variables with no-abstraction.
 									</p>
 									<p style="text-align: center">
 										<img src="img/RawVis_ThreadCreator.jpg" alt="Raw visualization ThreadCreator Benchmark">
 									</p>
+								</div>
+
+								<div class="col-sm-12">
+									<a name="ThreadCreator_funcView"></a>
+									<h5 class="archView">Functional concurrency view</h5>
+									<p>
+										<h6 class="archView">Functional Flow sub-view</h6>
+										<p>
+											<img src="img/ThreadCreator_operation_functions_L2.jpg">
+											<i>Functional Flow sub-view at Level 2</i>
+										</p>
+										<p>
+											<img src="img/ThreadCreator_operation_functions_L1.jpg">
+											<i>Functional Flow sub-view at Level 1</i>
+										</p>
+									</p>
+									<p>
+										<h6 class="archView">Execution Control Flow sub-view</h6>
+										<p>
+											<img src="img/ThreadCreator_logical_decision_L2.jpg">
+											<i>Execution Control Flow sub-view at Level 2</i>
+										</p>
+										<p>
+											<img src="img/ThreadCreator_logical_decision_L1.jpg">
+											<i>Execution Control Flow sub-view at Level 1</i>
+										</p>
+									</p>
+
+								</div>
+
+								<div class="col-sm-12">
+									<a name="ThreadCreator_techView"></a>
+									<h5 class="archView">Technical concurrency view</h5>
+									<p>
+											<h6 class="archView">1- Logical Components</h6>
+											<img src="img/ThreadCreator_logical_comp.jpg">
+									</p>
+									<p>
+											<h6 class="archView">2- Data Type</h6>
+											<img src="img/ThreadCreator_Logical_Data_L0-dt1.jpg">
+											<img src="img/ThreadCreator_Logical_Data_L0-dt2.jpg">
+									</p>
+									<p>
+											<h6 class="archView">3- Logical Data</h6>
+											<img src="img/ThreadCreator_Logical_Data_L1.jpg">
+									</p>
+
+								</div>
+								<div class="col-sm-12">
+									<a name="ThreadCreator_EvaluationParameters"></a>
+									<h6><strong>Evaluation Parameters in Functional Concurrency View</strong></h6>
+									<div class="flex justify-content-center">
+										<table class="table table-bordered view_result">
+										  <thead>
+											<caption>Table 3: ThreadCreator benchmark - Evaluation Parameters</caption>
+											<tr>
+												  <th scope="col"><strong>ThreadCreator</strong></th>
+												  <th scope="col" class="text-center">Raw visualization</th>
+												  <th scope="col" colspan="2" class="text-center">Functional Concurrency View</th>
+											</tr>
+											<tr>
+												<th></th>
+												<th></th>
+											  	<th scope="col" class="text-center">Functional Flow <br> sub-view</th>
+											  	<th scope="col" class="text-center">Execution Control Flow <br> sub-view</th>
+											</tr>
+										  	<tr>
+												<th scope="col">Highest Abstraction Level</th>
+												<th scope="col" class="text-center">Level 0</th>
+												<th scope="col" class="text-center">Level 2</th>
+												<th scope="col" class="text-center">Level 2</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <th scope="row">Number of Elements (Nodes/Boxes)</th>
+											  <td class="has_num">29</td>
+											  <td class="has_num">14</td>
+											  <td class="has_num">12</td>
+											</tr>
+											<tr>
+											  <th scope="row">Number of Relations (Edges/Lines)</th>
+											  <td class="has_num">113</td>
+											  <td class="has_num">13</td>
+											  <td class="has_num">9</td>
+
+											</tr>
+										  	<tr>
+												<th>Element Reduction Percentage</th>
+												<td class="has_num">-</td>
+												<td class="has_num">51.7%</td>
+												<td class="has_num">59%</td>
+											</tr>
+											<tr>
+												<th>Relation Reduction Percentage</th>
+												<td class="has_num">-</td>
+												<td class="has_num">89%</td>
+												<td class="has_num">92%</td>
+											</tr>
+										  </tbody>
+										</table>
+									</div>
 								</div>
 							</div>
 					</div>
