@@ -14,7 +14,7 @@
 				<h1>ArchViMP </h1>
 				<h2> <strong>Arch</strong>itectural <strong>Vi</strong>ews for <strong>M</strong>ultithreaded <strong>P</strong>rograms</h2>
 				<h3>a Framework for Automatic Extraction of Concurrency-related Architectural Properties from Software</h3>
-				<p> <strong>Keywords:</strong> Concurrent programming, Multithreading programming, Architectural abstraction, Architectural views, concurrency properties visualization, </p>
+				<p> <strong>Keywords:</strong> Concurrent programming, Multithreading programming, Architectural abstraction, Architectural views, concurrency properties visualization </p>
 				<p>&copy; Supported by the research institutes <a href="https://www.iese.fraunhofer.de/en.html" target="_blank"> Fraunhofer IESE</a> and <a target="_blank" href="https://www.dfki.de/en/web/">DFKI-IFS</a></p>
 
 			</div>
@@ -39,7 +39,7 @@
 					<div class="col-sm-12">
 						<a name="Overview"></a>
 						<h2>ArchViMP Overview Structure</h2>
-						<p>
+						<p class="text-justify">
 							Figure 1 show the overview structure of ArchViMP framework where the interaction of the framework with external systems is depicted.
 						</p>
 						<p style="text-align: center">
@@ -55,10 +55,12 @@
 						</p>
 						<p>
 							<h3>1- The list of the shared variables </h3>
+							<p class="text-justify">
 								This is provided by the <a href="https://dl.acm.org/doi/pdf/10.1145/3339186.3339195" target="_blank"><i> previous work </i></a>
 									(See Figure 2), which is based on using the
 									<a href="https://dl.acm.org/doi/pdf/10.1145/265924.265927" target="_blank"><i>Eraser Lockset algorithm</i></a>
-						<p>In below there is the list of shared variables of <a href="https://ieeexplore.ieee.org/abstract/document/6926012" target="_blank">ROSACE</a> benchmark as an example.</p>
+								In below there is the list of shared variables of <a href="https://ieeexplore.ieee.org/abstract/document/6926012" target="_blank">ROSACE</a> benchmark as an example.
+							</p>
 									<code>
 										<br>
 										<strong>variable name,Address of memory,Data type;</strong> <br>
@@ -78,8 +80,10 @@
 						</p>
 						<p>
 							<h3>2- Execution trace data</h3>
-							This file is a detailed list of the executed instructions. In the box below a small part of the file is displayed.
-							<p>In below you see the execution trace data of <a href="https://ieeexplore.ieee.org/abstract/document/6926012" target="_blank">ROSACE</a> benchmark as an example.</p>
+							<p class="text-justify">
+								This file is a detailed list of the executed instructions. In the box below a small part of the file is displayed.
+								In below you see the execution trace data of <a href="https://ieeexplore.ieee.org/abstract/document/6926012" target="_blank">ROSACE</a> benchmark as an example.
+							</p>
 							<code>
 								<br>
 								<strong>Timestamp,ThreadID,Operation,ParameterName (function or a variable name),Address of memory,Additional info (data typeof variable),Value,filename,source code line number</strong><br>
@@ -128,13 +132,14 @@
 					<div class="col-sm-12">
 						<a name="Notations"></a>
 						<h2>Architectural Notations for Concurrency-related Properties</h2>
-						<p>To represent concurrency-related architectural properties of software, we adopt the
+						<p class="text-justify">To represent concurrency-related architectural properties of software, we adopt the
 							<a href="https://www.omg.org/spec/UML/2.0/About-UML/" target="_blank">UML (Unified Modelling Language) 2.0</a>
-							notations (
-							<a href="http://read.pudn.com/downloads101/doc/414024/(2005-05)(0521616786)TheElementsofUML2Style.pdf" target="_blank">The elements of UML (TM) 2.0 style</a>
-							)
+							notations
+							(<a href="http://read.pudn.com/downloads101/doc/414024/(2005-05)(0521616786)TheElementsofUML2Style.pdf" target="_blank">
+								The elements of UML (TM) 2.0 style
+							</a>).
 						</p>
-						<p>Primarily, we reuse the views-specific notations from
+						<p class="text-justify">Primarily, we reuse the views-specific notations from
 							<a href="https://dl.acm.org/doi/10.1145/3129790.3129814" target="_blank">
 								Embedded Modelling Profile (EMP)
 							</a>
@@ -153,31 +158,30 @@
 							and introduce four flags to specify the three access operation types for all elements and to
 							clarify the shared variables that are only used inside a logical decision by a
 							Condition Only flag.
-							Table in below contains the detailed description of the notations.
+							Table 1 in below contains the detailed description of the notations.
 						</p>
-						<p style="text-align: center; width: 90%">
+						<p style="text-align: center;">
 							<img src="img/notations.jpg" alt="ArchViMP Notation Description"><br>
-							<i>ArchViMP Notation Description</i>
+							<i>Table 1: ArchViMP Notation Description</i>
 						</p>
 
 					</div>
 					<div class="col-sm-12">
 						<a name="Evaluation"></a>
 						<h2>Evaluation</h2>
-						<p>To evaluate our work, we have publicly available benchmarks of parallel and concurrent programs based on <a href="https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html" target="_blank">POSIX</a> threads.</p>
-						<p>In order to test our approach on software with a complexity that resembles that present in industrial software, we focused on two publicly available benchmarks.
+						<p class="text-justify">To evaluate our work, we have publicly available benchmarks of parallel and concurrent programs based on <a href="https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html" target="_blank">POSIX</a> threads.
+							In order to test our approach on software with a complexity that resembles that present in industrial software, we focused on two publicly available benchmarks.
 							<ul>
 								<li><a href="https://ieeexplore.ieee.org/abstract/document/6926012" target="_blank">ROSACE</a> (Research Open-Source Avionics and Control Engineering)</li>
 								<li><a href="http://www.tacle.eu/index.php/activities/taclebench" target="_blank">TACLeBench</a> (Timing Analysis on Code-Level) - <a href="https://github.com/tacle/tacle-bench/tree/master/bench/app/powerwindow">powerwindow</a></li>
 							</ul>
-							In addition to these two benchmarks, we developed our own benchmark, called <strong>ThreadCreator</strong>, to mimic the behavior of industrial software as well as to cover the corner cases we mentioned in the paper Section 3.4. </p>
-							<p>
-								We counted the actual number of technical elements for each benchmarks (Table 1).
-							</p>
+							In addition to these two benchmarks, we developed our own benchmark, called <strong>ThreadCreator</strong>, to mimic the behavior of industrial software as well as to cover the corner cases we mentioned in the paper Section 3.4. <br>
+							We counted the actual number of technical elements for each benchmarks (Table 2).
+						</p>
 							<div class="d-flex justify-content-center">
 								<table class="table table-bordered">
 								  <thead>
-									<caption>Table 1: Actual number of technical elements of benchmarks</caption>
+									<caption>Table 2: Actual number of technical elements of benchmarks</caption>
 									<tr>
 									  <th scope="col"></th>
 									  <th scope="col">ROSACE</th>
@@ -218,12 +222,8 @@
 								<a name="ROSACE_L0"></a>
 								<div>
 									<h5>ROSACE Raw visualization at abstraction level 0</h5>
-									<p>This visualization shows the direct interaction between threads over shared variables with no-abstraction.
-										For this benchmark we reached:
-										<ul>
-											<li>Total Number of Elements: 12</li>
-											<li>Total Number of Relations: 24</li>
-										</ul>
+									<p>
+										This visualization shows the direct interaction between threads over shared variables with no-abstraction.
 									</p>
 									<p style="text-align: center">
 										<img src="img/RawVis_ROSACE.jpg" alt="Raw visualization ROSACE Benchmark">
@@ -254,8 +254,8 @@
 										</p>
 										<a name="ROSACE_execution_subview"></a>
 										<h6><strong>Execution Control Flow sub-view</strong></h6>
-										<p style="text-align: center" class="ArchView_img">
-											<img src="img/ROSACE_logical_decision_L2.jpg" alt="ROSACE Execution Control Flow sub-view at level 2"><br>
+										<p style="text-align: center;" >
+											<img src="img/ROSACE_logical_decision_L2.jpg" alt="ROSACE Execution Control Flow sub-view at level 2" style="width: 65%"><br>
 											<i>Execution Control Flow sub-view at level 2 - created by EPFR, LDR rules</i>
 										</p>
 										<p style="text-align: center" class="ArchView_img">
@@ -297,34 +297,65 @@
 									<div class="d-flex justify-content-center">
 										<table class="table table-bordered view_result">
 										  <thead>
-											<caption>Table 2: ROSACE benchmark - Amount of elements and relations retrieved in different views</caption>
+											<caption>Table 3: ROSACE benchmark - Amount of elements and relations retrieved in different views</caption>
 											<tr>
 											  <th scope="col"><strong>ROSACE</strong></th>
 											  <th scope="col">Raw visualization</th>
-											  <th scope="col">Functional Flow sub-view <br> at Level 2</th>
-											  <th scope="col">Functional Flow sub-view <br> at Level 1</th>
-											  <th scope="col">Execution Control Flow sub-view <br> at Level 2</th>
-											  <th scope="col">Execution Control Flow sub-view <br> at Level 1</th>
+											  <th scope="col">Functional Flow sub-view</th>
+<!--											  <th scope="col">Functional Flow sub-view <br> at Level 2</th>-->
+<!--											  <th scope="col">Functional Flow sub-view <br> at Level 1</th>-->
+											  <th scope="col">Execution Control Flow sub-view</th>
+<!--											  <th scope="col">Execution Control Flow sub-view <br> at Level 2</th>-->
+<!--											  <th scope="col">Execution Control Flow sub-view <br> at Level 1</th>-->
+											</tr>
+										  	<tr>
+												<th scope="col"></th>
+												<th scope="col" colspan="2">Level 2</th>
+												<th scope="col" colspan="2">Level 2</th>
 											</tr>
 										  </thead>
 										  <tbody>
+										  	<tr>
+												<th>Abstraction Level</th>
+												<td>0</td>
+												<td>2</td>
+												<td>1</td>
+												<td>2</td>
+												<td>1</td>
+
+											</tr>
 											<tr>
 											  <th scope="row">Number of Elements (Nodes/Boxes)</th>
 											  <td class="has_num">12</td>
 											  <td class="has_num">6</td>
-											  <td class="has_num"></td>
-											  <td class="has_num"></td>
-											  <td class="has_num"></td>
-
+											  <td class="has_num">9</td>
+											  <td class="has_num">4</td>
+											  <td class="has_num">4</td>
 											</tr>
 											<tr>
 											  <th scope="row">Number of Relations (Edges/Lines)</th>
 											  <td class="has_num">24</td>
 											  <td class="has_num">4</td>
-											  <td class="has_num"></td>
-											  <td class="has_num"></td>
-											  <td class="has_num"></td>
+											  <td class="has_num">10</td>
+											  <td class="has_num">2</td>
+											  <td class="has_num">3</td>
 
+											</tr>
+										  	<tr>
+												<th>Element Reduction Percentage</th>
+												<td class="has_num">-</td>
+												<td class="has_num"></td>
+												<td class="has_num"></td>
+												<td class="has_num"></td>
+												<td class="has_num"></td>
+											</tr>
+											<tr>
+												<th>Relation Reduction Percentage</th>
+												<td class="has_num">-</td>
+												<td class="has_num"></td>
+												<td class="has_num"></td>
+												<td class="has_num"></td>
+												<td class="has_num"></td>
 											</tr>
 										  </tbody>
 										</table>
