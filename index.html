@@ -42,8 +42,8 @@
 							Figure 1 show the overview structure of ArchViMP framework where the interaction of the framework with external systems is depicted.
 						</p>
 						<p style="text-align: center">
-							<img src="img/overview_ArchiVi_blackbox_V5.png" width="1096" class="overview_dig">
-							<p style="text-align: center"><i>Figure 1: The overview structure of ArchViMP framework</i></p>
+							<img src="img/overview_ArchViMP.png" width="1096" class="overview_dig">
+							<p style="text-align: center"><i>Figure 1: The overview of ArchViMP framework structure</i></p>
 						</p>
 					</div>
 					<div>
@@ -201,22 +201,46 @@
 									</p>
 									<a name="ROSACE_functional_subview"></a>
 										<h6><strong>Functional Flow sub-view</strong></h6>
+										<p style="text-align: center" class="ArchView_img">
+											<img src="img/ROSACE_operation_functions_L2.jpg" alt="ROSACE Functional Flow sub-view at level 2"><br>
+											<i>Functional Flow sub-view at level 2 - created by EPFR and CFR rules</i>
+										</p>
+										<p style="text-align: center" class="ArchView_img">
+											<img src="img/ROSACE_operation_functions_L1.jpg" alt="ROSACE Functional Flow sub-view at level 1"><br>
+											<i>Functional Flow sub-view at level 1 - created by CFR, FOR and possibly DSR rules</i>
+										</p>
+										<p style="text-align: center" class="ArchView_img">
+											Even after abstraction interpretation of interaction between elements might be challenging.
+											Therefore, we made the understanding of views easier by providing an interactive interaction between sub-views.
+											<img src="img/ROSACE_operation_functions_L1_1.jpg" alt="ROSACE Functional Flow sub-view at level 1"><br>
+											<i>Functional Flow sub-view at level 1 - function run_rosace() is selected by user</i>
+										</p>
 										<a name="ROSACE_execution_subview"></a>
 										<h6><strong>Execution Control Flow sub-view</strong></h6>
+										<p style="text-align: center" class="ArchView_img">
+											<img src="img/ROSACE_logical_decision_L2.jpg" alt="ROSACE Execution Control Flow sub-view at level 2"><br>
+											<i>Execution Control Flow sub-view at level 2 - created by EPFR, LDR rules</i>
+										</p>
+										<p style="text-align: center" class="ArchView_img">
+											<img src="img/logical_decision_L1.jpg" alt="ROSACE Execution Control Flow sub-view at level 1"><br>
+											<i>Execution Control Flow sub-view at level 1 - created by LDR, LDOR and possibly DSR rules</i>
+										</p>
 
 									<a name="ROSACE_techView"></a>
 									<h5 class="archView">Technical concurrency view</h5>
 									Diagrams in this view are depicted at the abstraction level 1, which represent the technical members of the logical groups.
 									<div class="flex align-items-center">
 										<strong>1- Created by EPFR rule:</strong> Threads are technical components of a piece of software. The below diagram shows threads are grouped by EPFR rule into logical components.
-										<p style="text-align: center" class="techVis_EPFR">
+										<p style="text-align: center" class="ArchView_img">
 											<img src="img/Rosace_logical_comp.jpg" alt="ROSACE result of EPFR rule"><br>
 											<i>Technical concurrency view at level 1 - created by EPFR rule</i>
 										</p>
 									</div>
 									<div class="flex align-items-center">
 										<div class="row">
-											<strong>2- Created by DTR rule:</strong> This diagrams only shows the data types of the shared variables. <br>
+											<div class="col-sm-4">
+												<strong>2- Created by DTR rule:</strong> This diagrams only shows the data types of the shared variables.
+											</div>
 											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt1.png" alt="ROSACE result of DTR rule"></div>
 											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt2.png" alt="ROSACE result of DTR rule"></div>
 											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt3.png" alt="ROSACE result of DTR rule"></div>
@@ -234,40 +258,40 @@
 								<div>
 									<h6><strong>Amount of elements on screen in views</strong></h6>
 									<div class="d-flex justify-content-center">
-								<table class="table table-bordered">
-								  <thead>
-									<caption>Table 2: ROSACE benchmark - Amount of elements and relations retrieved in different views</caption>
-									<tr>
-									  <th scope="col"><strong>ROSACE</strong></th>
-									  <th scope="col">Raw visualization</th>
-									  <th scope="col">Functional Flow sub-view <br> at Level 2</th>
-									  <th scope="col">Functional Flow sub-view <br> at Level 1</th>
-									  <th scope="col">Execution Control Flow sub-view <br> at Level 2</th>
-									  <th scope="col">Execution Control Flow sub-view <br> at Level 1</th>
-									</tr>
-								  </thead>
-								  <tbody>
-									<tr>
-									  <th scope="row">Number of Elements (Nodes/Boxes)</th>
-									  <td class="has_num">12</td>
-									  <td class="has_num">6</td>
-									  <td class="has_num"></td>
-									  <td class="has_num"></td>
-									  <td class="has_num"></td>
+										<table class="table table-bordered view_result">
+										  <thead>
+											<caption>Table 2: ROSACE benchmark - Amount of elements and relations retrieved in different views</caption>
+											<tr>
+											  <th scope="col"><strong>ROSACE</strong></th>
+											  <th scope="col">Raw visualization</th>
+											  <th scope="col">Functional Flow sub-view <br> at Level 2</th>
+											  <th scope="col">Functional Flow sub-view <br> at Level 1</th>
+											  <th scope="col">Execution Control Flow sub-view <br> at Level 2</th>
+											  <th scope="col">Execution Control Flow sub-view <br> at Level 1</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <th scope="row">Number of Elements (Nodes/Boxes)</th>
+											  <td class="has_num">12</td>
+											  <td class="has_num">6</td>
+											  <td class="has_num"></td>
+											  <td class="has_num"></td>
+											  <td class="has_num"></td>
 
-									</tr>
-									<tr>
-									  <th scope="row">Number of Relations (Edges/Lines)</th>
-									  <td class="has_num">24</td>
-									  <td class="has_num">4</td>
-									  <td class="has_num"></td>
-									  <td class="has_num"></td>
-									  <td class="has_num"></td>
+											</tr>
+											<tr>
+											  <th scope="row">Number of Relations (Edges/Lines)</th>
+											  <td class="has_num">24</td>
+											  <td class="has_num">4</td>
+											  <td class="has_num"></td>
+											  <td class="has_num"></td>
+											  <td class="has_num"></td>
 
-									</tr>
-								  </tbody>
-								</table>
-							</div>
+											</tr>
+										  </tbody>
+										</table>
+									</div>
 								</div>
 
 							</div>
