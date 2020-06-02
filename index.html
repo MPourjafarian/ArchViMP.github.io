@@ -207,7 +207,7 @@
 							</div>
 
 						<a name="Result"></a>
-						<div>
+						<div class="col-sm-12">
 							<h3>Results</h3>
 							<p>
 								When applied on these three benchmarks, our approach produced diagrams at all three levels of abstraction.
@@ -231,7 +231,7 @@
 								</div>
 								<a name="ROSACE_funcView"></a>
 								<div>
-									<h5 class="archView">Functional concurrency view</h5>
+									<h5 class="archView">Functional Concurrency View</h5>
 									<p>
 										The functional concurrency view describes the functional behavior of threads.
 										This view shows the interaction between a logical component created by EPFR rule and logical data
@@ -264,10 +264,10 @@
 										</p>
 
 									<a name="ROSACE_techView"></a>
-									<h5 class="archView">Technical concurrency view</h5>
+									<h5 class="archView">Technical Concurrency View</h5>
 									Diagrams in this view are depicted at the abstraction level 1, which represent the technical members of the logical groups.
 									<div class="flex align-items-center">
-										<strong>1- Created by EPFR rule:</strong> Threads are technical components of a piece of software. The below diagram shows threads are grouped by EPFR rule into logical components.
+										<strong>1- Logical Components - created by EPFR rule:</strong> Threads are technical components of a piece of software. The below diagram shows threads are grouped by EPFR rule into logical components.
 										<p style="text-align: center" class="ArchView_img">
 											<img src="img/Rosace_logical_comp.jpg" alt="ROSACE result of EPFR rule"><br>
 											<i>Technical concurrency view at level 1 - created by EPFR rule</i>
@@ -276,7 +276,7 @@
 									<div class="flex align-items-center">
 										<div class="row">
 											<div class="col-sm-12">
-												<strong>2- Created by DTR rule:</strong> This diagrams only shows the data types of the shared variables.
+												<strong>2- Data Types - Created by DTR rule:</strong> This diagrams only shows the data types of the shared variables.
 											</div>
 											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt1.png" alt="ROSACE result of DTR rule"></div>
 											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt2.png" alt="ROSACE result of DTR rule"></div>
@@ -284,7 +284,7 @@
 										</div>
 									</div>
 									<div class="flex align-items-center">
-										<strong>3- Created by DSR rule:</strong> The DSR rule groups the shared variables that, are members of a data structure, into a set of logical data.
+										<strong>3- Logical data - created by DSR rule:</strong> The DSR rule groups the shared variables that, are members of a data structure, into a set of logical data.
 										For ROSACE benchmark, no data structures were found.
 										<p style="text-align: center">
 											<img src="img/Rosace_DSR.png" alt="result of DSR rule" width="300">
@@ -292,12 +292,13 @@
 									</div>
 
 								</div>
-								<div>
-									<h6><strong>Amount of elements on screen in Functional Concurrency View</strong></h6>
-									<div class="d-flex justify-content-center">
+								<div class="col-sm-12">
+									<a name="ROSACE_EvaluationParameters"></a>
+									<h6><strong>Evaluation Parameters in Functional Concurrency View</strong></h6>
+									<div class="flex justify-content-center">
 										<table class="table table-bordered view_result">
 										  <thead>
-											<caption>Table 3: ROSACE benchmark - Views</caption>
+											<caption>Table 3: ROSACE benchmark - Evaluation Parameters</caption>
 											<tr>
 												  <th scope="col"><strong>ROSACE</strong></th>
 												  <th scope="col" class="text-center">Raw visualization</th>
@@ -360,18 +361,120 @@
 								<hr>
 								<h4>TACLeBench - powerwindow Benchmark</h4>
 								<a name="powerwindow_L0"></a>
-								<div>
+								<div class="col-sm-12">
 									<h5>powerwindow Raw visualization at abstraction level 0</h5>
 									<p>This visualization shows the direct interaction between threads over shared variables with no-abstraction.
-										For this benchmark we reached:
-										<ul>
-											<li>Total Number of Elements: 11</li>
-											<li>Total Number of Relations: 10</li>
-										</ul>
+
 									</p>
 									<p style="text-align: center">
 										<img src="img/RawVis_Tackle.JPG" alt="Raw visualization powerwindow Benchmark">
 									</p>
+								</div>
+								<div class="col-sm-12">
+									<a name="powerwindow_logicView"></a>
+									<h5 class="archView">Logical Concurrency View</h5>
+									<p>
+										For this benchmark we obtained logical concurrency view, where the direct interaction between threads over shared memory is depicted at level 3 of abstraction.
+										This group of threads in view is created by EPFR rule and shared variables are grouped by TOR and TASR rules.
+									</p>
+									<img src="img/Tacke_Logical_view_L3.jpg">
+								</div>
+								<div class="col-sm-12">
+									<a name="powerwindow_funcView"></a>
+									<h5 class="archView">Functional concurrency view</h5>
+									<p>
+										<h6 class="archView">Functional Flow sub-view</h6>
+										<img src="img/Tackle_operation_functions_L2.jpg">
+									</p>
+									<p>
+										<h6 class="archView">Execution Control Flow sub-view</h6>
+										<img src="img/Taclke_logical_decision_L2.jpg">
+									</p>
+
+								</div>
+								<div class="col-sm-12">
+									<a name="ROSACE_techView"></a>
+									<h5 class="archView">Technical concurrency view</h5>
+									<p>
+										<h6 class="archView">1- Logical Components</h6>
+										<img src="img/Tackle_logical_comp.jpg">
+									</p>
+									<p>
+										<h6 class="archView">2- Data Type</h6>
+										<img src="img/Tackle_techView_dt.png">
+									</p>
+									<p>
+										<h6 class="archView">3- Logical Data</h6>
+										<img src="img/Rosace_DSR.png">
+									</p>
+								</div>
+								<div class="col-sm-12">
+									<a name="powerwindow_EvaluationParameters"></a>
+									<h6><strong>TACLeBench - powerwindow Evaluation Parameters</strong></h6>
+									<div class="flex justify-content-center">
+										<table class="table table-bordered view_result">
+										  <thead>
+											<caption>Table 4: TACLeBench - powerwindow benchmark - Evaluation Parameters</caption>
+											<tr>
+												  <th scope="col"><strong>TACLeBench - powerwindow</strong></th>
+												  <th scope="col" class="text-center">Raw visualization</th>
+												  <th scope="col" colspan="2" class="text-center">Functional Concurrency View</th>
+												  <th scope="col" colspan="2" class="text-center">Logical Concurrency View</th>
+											</tr>
+											<tr>
+												<th></th>
+												<th></th>
+											  	<th scope="col" class="text-center">Functional Flow <br> sub-view</th>
+<!--											  <th scope="col">Functional Flow sub-view <br> at Level 2</th>-->
+<!--											  <th scope="col">Functional Flow sub-view <br> at Level 1</th>-->
+											  	<th scope="col" class="text-center">Execution Control Flow <br> sub-view</th>
+<!--											  <th scope="col">Execution Control Flow sub-view <br> at Level 2</th>-->
+<!--											  <th scope="col">Execution Control Flow sub-view <br> at Level 1</th>-->
+												<th></th>
+											</tr>
+										  	<tr>
+												<th scope="col">Highest Abstraction Level</th>
+												<th scope="col" class="text-center">Level 0</th>
+												<th scope="col" class="text-center">Level 2</th>
+												<th scope="col" class="text-center">-</th>
+												<th scope="col" class="text-center">Level 3</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <th scope="row">Number of Elements (Nodes/Boxes)</th>
+											  <td class="has_num">11</td>
+											  <td class="has_num">4</td>
+											  <td class="has_num">-</td>
+											  <td class="has_num">6</td>
+											</tr>
+											<tr>
+											  <th scope="row">Number of Relations (Edges/Lines)</th>
+											  <td class="has_num">10</td>
+											  <td class="has_num">0</td>
+											  <td class="has_num">-</td>
+											  <td class="has_num">4</td>
+
+											</tr>
+										  	<tr>
+												<th>Element Reduction Percentage</th>
+												<td class="has_num">-</td>
+												<td class="has_num">63.6%</td>
+												<td class="has_num">-</td>
+												<td class="has_num">45%</td>
+
+											</tr>
+											<tr>
+												<th>Relation Reduction Percentage</th>
+												<td class="has_num">-</td>
+												<td class="has_num">-</td>
+												<td class="has_num">-</td>
+												<td class="has_num">60%</td>
+
+											</tr>
+										  </tbody>
+										</table>
+									</div>
 								</div>
 							</div>
 
