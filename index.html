@@ -23,6 +23,7 @@
 					<h3>Outlines</h3>
 					<p><a href="#Overview">ArchViMP Overview Structure</a></p>
 					<p><a href="#Inputs">ArchViMP Inputs</a></p>
+					<p><a href="#Notations">ArchViMP Notations</a></p>
 					<p><a href="#Evaluation">Evaluation</a></p>
 					<p class="c1"><a href="#Results">Results</a></p>
 						<p class="c2"><a href="#ROSACE">ROSACE Benchmark</a></p>
@@ -35,7 +36,7 @@
 						<p class="c2"><a href="#ThreadCreator">ThreadCreator Benchmark</a></p>
 				</div>
 				<div class="col-sm-10" style="padding-top: 2em">
-					<div>
+					<div class="col-sm-12">
 						<a name="Overview"></a>
 						<h2>ArchViMP Overview Structure</h2>
 						<p>
@@ -46,7 +47,7 @@
 							<p style="text-align: center"><i>Figure 1: The overview of ArchViMP framework structure</i></p>
 						</p>
 					</div>
-					<div>
+					<div class="col-sm-12">
 						<a name="Inputs"></a>
 						<h2>ArchViMP Inputs</h2>
 						<p>
@@ -124,7 +125,43 @@
 						</p>
 
 					</div>
-					<div>
+					<div class="col-sm-12">
+						<a name="Notations"></a>
+						<h2>Architectural Notations for Concurrency-related Properties</h2>
+						<p>To represent concurrency-related architectural properties of software, we adopt the
+							<a href="https://www.omg.org/spec/UML/2.0/About-UML/" target="_blank">UML (Unified Modelling Language) 2.0</a>
+							notations (
+							<a href="http://read.pudn.com/downloads101/doc/414024/(2005-05)(0521616786)TheElementsofUML2Style.pdf" target="_blank">The elements of UML (TM) 2.0 style</a>
+							)
+						</p>
+						<p>Primarily, we reuse the views-specific notations from
+							<a href="https://dl.acm.org/doi/10.1145/3129790.3129814" target="_blank">
+								Embedded Modelling Profile (EMP)
+							</a>
+							, which is an extension to
+							<a href="https://link.springer.com/book/10.1007%2F978-3-642-34614-9" target="_blank">
+								SPES 2020
+							</a>.
+							In addition, we use the UML block notation from APD introduced in
+							<a href="https://dl.acm.org/doi/10.1145/2442992.2442998" target="_blank">
+								a Pattern-supported Parallelization Approach
+							</a>
+							to show threads and their groups. In order to distinguish a box of elements, we utilize
+							EMP's idea of semantic separation of boxes through a static set of colors and dedicated
+							stereotypes. Moreover, we expand the in/out notation of the block notation from
+							<a href="https://dl.acm.org/doi/10.1145/2442992.2442998" target="_blank">APD</a>
+							and introduce four flags to specify the three access operation types for all elements and to
+							clarify the shared variables that are only used inside a logical decision by a
+							Condition Only flag.
+							Table in below contains the detailed description of the notations.
+						</p>
+						<p style="text-align: center; width: 90%">
+							<img src="img/notations.jpg" alt="ArchViMP Notation Description"><br>
+							<i>ArchViMP Notation Description</i>
+						</p>
+
+					</div>
+					<div class="col-sm-12">
 						<a name="Evaluation"></a>
 						<h2>Evaluation</h2>
 						<p>To evaluate our work, we have publicly available benchmarks of parallel and concurrent programs based on <a href="https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html" target="_blank">POSIX</a> threads.</p>
@@ -238,7 +275,7 @@
 									</div>
 									<div class="flex align-items-center">
 										<div class="row">
-											<div class="col-sm-4">
+											<div class="col-sm-12">
 												<strong>2- Created by DTR rule:</strong> This diagrams only shows the data types of the shared variables.
 											</div>
 											<div class="col-sm-4 techVis_dt"><img src="img/Rosace_techView_dt1.png" alt="ROSACE result of DTR rule"></div>
