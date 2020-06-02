@@ -5,6 +5,7 @@ body {text-align: left}
 .outline-nav a:hover {color: #17a2b8; cursor: pointer}
 .outline-nav h3, p.c2 a, .benchmark-div h4{color: #17a2b8;}
 table{width: 65% !important; margin: 1em}
+
 table.view_result{width: 92% !important; margin: 1em}
 img {
     width: 45%;
@@ -19,5 +20,5 @@ p.c2{margin-left: 1em; font-size: small}
 p.c3{margin-left: 2em; font-size: small}
 p.c4{margin-left: 3em; font-size: small}
 
-table tbody th.has_num, table thead caption {text-align: center}
+table tbody .has_num, table thead caption {text-align: center}
 h5.archView {text-decoration: underline}
